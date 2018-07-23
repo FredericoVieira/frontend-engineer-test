@@ -42,7 +42,7 @@
 
 - 2.1.1.4 Preprocessador de CSS: SASS (**Sugerido**)
 
-- 2.1.1.5 Framework de Teste: SASS (**Sugerido**)
+- 2.1.1.5 Framework de Teste: Jest/Jasmine (**Sugerido**)
 
 
 #### 2.1.2 Pontuação Bônus
