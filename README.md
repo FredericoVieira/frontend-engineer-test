@@ -1,60 +1,39 @@
 # Frontend Engineer Test
 
-## 1.0 Avaliação
+## Critérios de avaliação
+* Capacidade de seguir instruções;
+* Lógica, semântica e qualidade de código;
+* Utilização de API RESTful;
+* Domínio das ferramentas e tecnologias utilizadas;
+* Frequência de _commits_;
+* Capacidade de finalização de um projeto;
+* Domínio de ferramenta de controle de versão;
+* Testes e garantia de qualidade;
 
-1.1 Capacidade de seguir instruções
+## Tarefas
+1. Faça uma cópia deste repositório (não faça _fork_);
+2. Acesse [https://iextrading.com](https://iextrading.com) e procure a documentação da sua API aberta;
+3. Desenvolva um dashboard simples com 2 _views_/rotas:
+   - Uma listagem com os 20 maiores stocks e seus preços, além de um campo de busca para filtrar por quaisquer stocks disponíveis na API. O usuário poderá clicar ou tocar em um _stock_ específico e ir para a próxima _view_:
+   - Página de um _stock_ específico, com detalhes sobre ele. Fica a seu cargo definir o que deve ser mostrado.
 
-1.2 Qualidade, lógica e semântica do código
+## Requisitos de tecnologia
 
-1.3 Utilização de APIs REST
+* É obrigatório utilizar o React como _framework_ de _view_
 
-1.4 Nível de conhecimento das ferramentas utilizadas
+Além disso, sugerimos utilizar
+* Redux para _framework_ de estado;
+* SASS para pré-processamento de CSS;
+* Jest/Jasmine como _framework de teste JavaScript;
 
-1.5 Capacidade de finalização de um projeto
+A escolha do _framework_ de roteamento fica a seu cargo.
 
-1.6 Uso do Git como controle de versão
+### Pontos de sucesso
 
-1.7 Qualidade dos testes
-
---
-
-## 2.0 Tarefas
-
-2.1 Criar cópia do repositório (_commitar_ o mais frequente possível) no seu github, não um fork, cópia mesmo.
-
-2.2 Usar a API aberta em [https://iextrading.com](https://iextrading.com) para desenvolver um dashboard simples com 2 views/rotas.
- - 2.2.1 Mostrar top 20 stocks em preço com um campo de busca.
- - 2.2.2 Mostrar um stock específico com todos os dados que achar relevante.
-
---
-
-### 2.1 Tecnologia
-
-
-
-#### 2.1.1 Requerimentos para o teste
-
-- 2.1.1.1 Framework de view: React (**Necessário**)
-
-- 2.1.1.2 Framework de estado: Redux (**Sugerido**)
-
-- 2.1.1.3 Framework de rotas: w/e
-
-- 2.1.1.4 Preprocessador de CSS: SASS (**Sugerido**)
-
-- 2.1.1.5 Framework de Teste: Jest/Jasmine (**Sugerido**)
-
-
-#### 2.1.2 Pontuação Bônus
-
-- 2.1.2.1 Apresentar projeto no [Docker](https://www.docker.com/)
-
-- 2.1.2.2 Utilizar [TypeScript](https://www.typescriptlang.org/)
-
-- 2.1.2.3 Utilizar [webpack](https://webpack.js.org/) e produzir um único arquivo de _output_
-
-- 2.1.2.4 Utilizar [socket.io](https://socket.io) para criar um grafico _real time_ do mercado (endpoint fornecido pela API acima)
-
-- 2.1.2.5 Utilizar gráficos D3.js
-
-- 2.1.2.6 Utilizar tipos imutáveis ou [Immutable-JS](https://facebook.github.io/immutable-js/)
+Ao cumprir os pontos de sucesso abaixo, você melhora a sua pontuação no processo de seleção:
+- [ ] Apresentar projeto no [Docker](https://www.docker.com/);
+- [ ] Utilizar [TypeScript](https://www.typescriptlang.org/);
+- [ ] Utilizar [webpack](https://webpack.js.org/) e produzir um único arquivo de _output_;
+- [ ] Utilizar [socket.io](https://socket.io) para criar um gráfico _realtime_ do mercado (o endpoint é fornecido pela API)
+- [ ] Utilizar gráficos D3.js;
+- [ ] Utilizar tipos imutáveis ou [Immutable-JS](https://facebook.github.io/immutable-js/).
