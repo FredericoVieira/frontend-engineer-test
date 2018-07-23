@@ -20,7 +20,7 @@
 
 ## 2.0 Tarefas
 
-2.1 Clonar o repositório (_commitar_ o mais frequente possível).
+2.1 Criar cópia do repositório (_commitar_ o mais frequente possível) no seu github, não um fork, cópia mesmo.
 
 2.2 Usar a API aberta em [https://iextrading.com](https://iextrading.com) para desenvolver um dashboard simples com 2 views/rotas.
  - 2.2.1 Mostrar top 20 stocks em preço com um campo de busca.
