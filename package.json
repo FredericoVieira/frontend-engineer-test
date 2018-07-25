@@ -1,0 +1,22 @@
+{
+  "name": "frontend-engineer-test",
+  "version": "1.0.0",
+  "description": "## Critérios de avaliação * Capacidade de seguir instruções; * Lógica, semântica e qualidade de código; * Utilização de API RESTful; * Domínio das ferramentas e tecnologias utilizadas; * Frequência de _commits_; * Capacidade de finalização de um projeto; * Domínio de ferramenta de controle de versão; * Testes e garantia de qualidade;",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tracksale/frontend-engineer-test.git"
+  },
+  "author": "Frederico Vieira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tracksale/frontend-engineer-test/issues"
+  },
+  "homepage": "https://github.com/Tracksale/frontend-engineer-test#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
