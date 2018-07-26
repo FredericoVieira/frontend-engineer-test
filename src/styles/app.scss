@@ -1,6 +1,8 @@
-$navy: #001e38;
-$green: #15b78f;
+@import "./abstracts/variables";
 
-html {
-  background-color: $navy;
-}
+@import "./base/base";
+@import "./base/typography";
+
+@import "./layout/header";
+
+@import "./pages/home";

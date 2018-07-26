@@ -23,6 +23,8 @@
     }],
     "prop-types": [2],
     "no-extra-semi": 2,
+    "max-depth": ["error", 10],
+    "react/jsx-max-depth": ["error", { "max": 10 }]
   },
   "extends": ["eslint:recommended", "airbnb", "plugin:react/all"],
 }

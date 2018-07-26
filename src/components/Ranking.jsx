@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 class Ranking extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
-    };
+      items: [],
+    }
   }
 
   componentDidMount() {
@@ -18,34 +18,36 @@ class Ranking extends React.Component {
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result
-          });
+            items: result,
+          })
         },
         (error) => {
           this.setState({
             isLoaded: true,
-            error
-          });
-        }
+            error,
+          })
+        },
       )
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error, isLoaded, items } = this.state
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-          {items.map(item => (
-            <li key={item.symbol}>
-            	<Link to={`/stock/${item.symbol}`}>{item.symbol}</Link> | {item.lastSalePrice}
-            </li>
-          ))}
-        </ul>
-      );
+        <section className="section-ranking">
+          <ul>
+            {items.map(item => (
+              <li key={item.symbol}>
+              	<Link to={`/stock/${item.symbol}`}>{item.symbol}</Link> | {item.lastSalePrice}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
     }
   }
 }

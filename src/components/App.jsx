@@ -1,15 +1,29 @@
 import React from 'react'
-import Footer from './Footer'
+import { Switch, Route } from 'react-router-dom'
 import Header from './Header'
-import Main from './Main'
+import Ranking from './Ranking'
+import Stock from './Stock'
+import Footer from './Footer'
 
 
 const App = () => (
-  <div>
-    <Header />
-    <Main />
+  <main>
+    <Switch>
+      <Route
+        component={() => (
+          <div>
+            <Header />
+            <Ranking />
+          </div>
+        )}
+        exact
+        path="/"
+      />
+      <Route component={Stock} path="/stock/:symbol" />
+      <Route component={Ranking} />
+    </Switch>
     <Footer />
-  </div>
+  </main>
 )
 
 export default App
