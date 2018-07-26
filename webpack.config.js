@@ -7,26 +7,31 @@ var APP_DIR = path.resolve(__dirname, 'src');
 var config = {
   entry: APP_DIR + '/components/index.jsx',
   output: {
-      path: BUILD_DIR,
-      filename: 'bundle.js'
+    path: BUILD_DIR,
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx','.json'] 
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
       {
         test: /\.jsx?/,
-        include: APP_DIR,
-        loaders: ["babel-loader"]
+        enforce: 'pre',
+        exclude: /node_modules/,
+        loaders: ['eslint-loader'],
+      },
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
       },
       {
         test: /\.scss$/,
-        include: APP_DIR,
-        use: ['style-loader','css-loader', 'sass-loader']
-      }
-    ]
-  }
-}; 
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
+};
 
 module.exports = config;
