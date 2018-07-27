@@ -17,10 +17,32 @@ body {
         font-weight: 400;
         letter-spacing: 3.5rem;
     }
-    
+
     &--sub {
         display: block;
         font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+    }
+}
+
+.heading-stock {
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    &--main {
+        display: block;
+        font-size: 1.7rem;
+        font-weight: 400;
+        letter-spacing: 0.5rem;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 1rem;
         font-weight: 700;
         letter-spacing: 1.75rem;
     }

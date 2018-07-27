@@ -42,21 +42,80 @@ class Stock extends React.Component {
             &lt; Back
           </Link>
           <h1 className="stock__title">
-            {items.company.companyName}
+            {items.company.symbol}
           </h1>
-          <div>{items.company.industry}</div>
-          <div>{items.company.website}</div>
-          <div>{items.company.CEO}</div>
-          <div>{items.company.tags[0]}</div>
-          <div>{items.company.description}</div>
           <div className="stock__infos">
+            <div className="stock__text-box">
+              <h1 className="heading-stock">
+                <span className="heading-stock--main">
+                  {items.company.companyName}
+                </span>
+                <span className="heading-stock--sub">
+                  {items.company.sector}
+                </span>
+              </h1>
+            </div>
             <div className="grid">
-              <div className="grid-item"><span>Price</span>{items.price}</div>
-              <div className="grid-item"><span>Date</span>{items.previous.date}</div>
-              <div className="grid-item"><span>High</span>{items.previous.high}</div>
-              <div className="grid-item"><span>Low</span>{items.previous.low}</div>
-              <div className="grid-item"><span>Change</span>{items.previous.change}</div>
-              <div className="grid-item"><span>Change %</span>{items.previous.changePercent}</div>
+              <div className="grid__item">
+                <span className="grid__item--title">Price</span>
+                {items.price}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">Date</span>
+                {items.previous.date}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">High</span>
+                {items.previous.high}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">Low</span>
+                {items.previous.low}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">Change</span>
+                {items.previous.change}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">Change %</span>
+                {items.previous.changePercent}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">Open</span>
+                {items.previous.open}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">Close</span>
+                {items.previous.close}
+              </div>
+              <div className="grid__item">
+                <span className="grid__item--title">Volume</span>
+                {items.previous.volume}
+              </div>
+            </div>
+            <div className="stock__about">
+              <h1 className="stock__about--title">
+                About
+              </h1>
+              <div className="row">
+                <div className="column description">
+                  <div>{items.company.description}</div>
+                </div>
+                <div className="column">
+                  <div className="column__padding">
+                    <span className="column__title">Industry</span>
+                    {items.company.industry}
+                  </div>
+                  <div className="column__padding">
+                    <span className="column__title">CEO</span>
+                    {items.company.CEO}
+                  </div>
+                  <div className="column__padding">
+                    <span className="column__title">Website</span>
+                    {items.company.website}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
