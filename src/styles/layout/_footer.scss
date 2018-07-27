@@ -1,0 +1,14 @@
+.footer {
+  background-color: $color-grey-light-2;
+  height: 10vh;
+
+  .credits {
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.2rem;
+
+    &__link {
+      color: $color-grey-dark;
+    }
+  }
+}

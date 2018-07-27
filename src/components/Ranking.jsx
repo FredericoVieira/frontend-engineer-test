@@ -18,7 +18,7 @@ class Ranking extends React.Component {
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result,
+            items: result.slice(0, 20),
           })
         },
         (error) => {
@@ -32,25 +32,39 @@ class Ranking extends React.Component {
 
   render() {
     const { error, isLoaded, items } = this.state
-    if (error) {
-      return <div>Error: {error.message}</div>
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-        <section className="section-ranking">
-          <ul>
-            {items.map(item => (
-              <li key={item.symbol}>
-              	<Link to={`/stock/${item.symbol}`}>{item.symbol}</Link> | {item.lastSalePrice}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
+    if (error) return <div>Error: {error.message}</div>
+    if (!isLoaded) return <div>Loading...</div>
+    return (
+      <section className="section-ranking">
+        <div className="ranking-table-wrapper">
+          <table className="ranking-table">
+            <thead>
+              <tr className="ranking-table__header">
+                <th className="">
+                  a
+                </th>
+                <th className="">
+                  b
+                </th>
+              </tr>
+            </thead>
+            <tbody> 
+              {items.map(item => (
+                <tr key={item.symbol}>
+                  <td>
+                    <Link className="symbol-link" to={`/stock/${item.symbol}`}>{item.symbol}</Link>
+                  </td>
+                  <td>
+                    {item.lastSalePrice}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
   }
 }
 
 export default Ranking
-
