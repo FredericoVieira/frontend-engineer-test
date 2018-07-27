@@ -18,7 +18,7 @@ const App = () => (
       </h1>
 
       <div className="header__filter">
-        Filter Here
+        Filter goes here
       </div>
     </div>
   </header>

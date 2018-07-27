@@ -34,7 +34,7 @@ class Stock extends React.Component {
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) return <div>Error: {error.message}</div>
-    if (!isLoaded) return <div>Loading...</div>
+    if (!isLoaded) return <div className="loading stock">Loading...</div>
     return (
       <section className="section-stock">
         <div className="stock-wrapper">
@@ -98,10 +98,10 @@ class Stock extends React.Component {
                 About
               </h1>
               <div className="row">
-                <div className="column description">
-                  <div>{items.company.description}</div>
-                </div>
-                <div className="column">
+                <div className="column info">
+                  <div className="column__padding">
+                    {items.company.description}
+                  </div>
                   <div className="column__padding">
                     <span className="column__title">Industry</span>
                     {items.company.industry}
@@ -114,6 +114,9 @@ class Stock extends React.Component {
                     <span className="column__title">Website</span>
                     {items.company.website}
                   </div>
+                </div>
+                <div className="column chart">
+                  Chart Area
                 </div>
               </div>
             </div>

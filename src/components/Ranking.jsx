@@ -36,12 +36,12 @@ class Ranking extends React.Component {
     const sortedItems = items.slice(0, 20)
 
     if (error) return <div>Error: {error.message}</div>
-    if (!isLoaded) return <div>Loading...</div>
+    if (!isLoaded) return <div className="loading ranking">Loading...</div>
     return (
       <section className="section-ranking">
         <div className="ranking-table-wrapper">
           <h1 className="ranking-table__title">
-            Most valuable stocks
+            Most daily valuable stocks
           </h1>
           <table className="ranking-table">
             <thead>

@@ -77,8 +77,19 @@
           letter-spacing: 0.3rem;
           text-transform: uppercase;
 
-          &.description {
+          &.info {
             padding-right: 5rem;
+          }
+
+          &.chart {
+            background-image: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 20px,
+            $color-grey-light-2 20px,
+            $color-grey-light-2 40px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           &__padding {
