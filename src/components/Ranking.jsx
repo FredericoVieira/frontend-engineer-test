@@ -18,7 +18,7 @@ class Ranking extends React.Component {
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result.slice(0, 20),
+            items: result,
           })
         },
         (error) => {
@@ -32,27 +32,47 @@ class Ranking extends React.Component {
 
   render() {
     const { error, isLoaded, items } = this.state
+    items.sort((a, b) => parseFloat(a.lastSalePrice) - parseFloat(b.lastSalePrice)).reverse()
+    const sortedItems = items.slice(0, 20)
+
     if (error) return <div>Error: {error.message}</div>
     if (!isLoaded) return <div>Loading...</div>
     return (
       <section className="section-ranking">
         <div className="ranking-table-wrapper">
+          <h1 className="ranking-table__title">
+            Most valuable stocks
+          </h1>
           <table className="ranking-table">
             <thead>
               <tr className="ranking-table__header">
                 <th className="">
-                  a
+                  Symbol
                 </th>
                 <th className="">
-                  b
+                  Sector
+                </th>
+                <th className="">
+                  Last Sale Size
+                </th>
+                <th className="">
+                  Last Sale Price
                 </th>
               </tr>
             </thead>
-            <tbody> 
-              {items.map(item => (
+            <tbody>
+              {sortedItems.map(item => (
                 <tr key={item.symbol}>
                   <td>
-                    <Link className="symbol-link" to={`/stock/${item.symbol}`}>{item.symbol}</Link>
+                    <Link className="symbol-link" to={`/stock/${item.symbol}`}>
+                      {item.symbol}
+                    </Link>
+                  </td>
+                  <td>
+                    {item.sector}
+                  </td>
+                  <td>
+                    {item.lastSaleSize}
                   </td>
                   <td>
                     {item.lastSalePrice}

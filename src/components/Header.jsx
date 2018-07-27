@@ -9,8 +9,12 @@ const App = () => (
     </div>
     <div className="header__text-box">
       <h1 className="heading-primary">
-        <span className="heading-primary--main">FDValues</span>
-        <span className="heading-primary--sub">Stock exchange</span>
+        <span className="heading-primary--main">
+          FDValues
+        </span>
+        <span className="heading-primary--sub">
+          Stock exchange
+        </span>
       </h1>
 
       <div className="header__filter">

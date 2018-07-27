@@ -1,9 +1,17 @@
 .section-ranking {
-  background-color: $color-grey-light-1;
+  background-color: $color-grey-light-2;
   padding: 5rem 0;
 
   .ranking-table-wrapper {
     padding: 0vh 5vh;
+
+    .ranking-table__title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.75rem;
+      padding-bottom: 1rem;
+    }
 
     .ranking-table {
       border-collapse: collapse;
