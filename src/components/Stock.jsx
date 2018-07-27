@@ -32,7 +32,7 @@ class Stock extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error, isLoaded, items } = this.state
     if (error) return <div>Error: {error.message}</div>
     if (!isLoaded) return <div className="loading stock">Loading...</div>
     return (
