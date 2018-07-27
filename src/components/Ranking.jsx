@@ -32,11 +32,13 @@ class Ranking extends React.Component {
 
   render() {
     const { error, isLoaded, items } = this.state
-    items.sort((a, b) => parseFloat(a.lastSalePrice) - parseFloat(b.lastSalePrice)).reverse()
-    const sortedItems = items.slice(0, 20)
 
     if (error) return <div>Error: {error.message}</div>
     if (!isLoaded) return <div className="loading ranking">Loading...</div>
+
+    items.sort((a, b) => parseFloat(a.lastSalePrice) - parseFloat(b.lastSalePrice)).reverse()
+    const sortedItems = items.slice(0, 20)
+
     return (
       <section className="section-ranking">
         <div className="ranking-table-wrapper">
